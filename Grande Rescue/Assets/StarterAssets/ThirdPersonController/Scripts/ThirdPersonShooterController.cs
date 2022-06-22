@@ -24,10 +24,14 @@ public class ThirdPersonShooterController : MonoBehaviour
 
     private void Update()
     {
+        Vector3 mouseWorldPosition = Vector3.zero;
         if (starterAssetsInputs.aim)
         {
             aimVirtualCamera.gameObject.SetActive(true);
             thirdPersonController.SetSensitivity(aimSensitivity);
+            Vector3 worldAimTarget = mouseWorldPosition;
+            worldAimTarget.y = transform.position.y;
+            Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
         }
         else
         {
