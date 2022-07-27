@@ -1,2 +1,2 @@
 # Grande-Rescue
-IGD Team Baaghi's Project
+IGD Team 5 Debuggers Project
